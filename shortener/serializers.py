@@ -13,13 +13,16 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ShortenerSerializer(serializers.ModelSerializer):
-    author = UserSerializer(read_only=True)
+    url = serializers.HyperlinkedIdentityField(
+        view_name='shortener:redirect',
+        lookup_field='short_code'
+    )
     class Meta:
         model =  Shortener
-        fields = ('website', 'short_code', 'author', )
+        fields = ('short_code', 'url', 'website')
 
 
 class ShortenedUrlSerializer(serializers.ModelSerializer):
     class Meta:
         model = Shortener
-        fields = ['website', 'short_code',]
+        fields = ['created_at', 'last_visited', 'visit_count']

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.dispatch import receiver
 from django.db.models.signals import pre_save
+from django.urls import reverse
 
 from .utils import shortcode_gen
 
@@ -19,6 +20,10 @@ class Shortener(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     last_visited = models.DateTimeField(blank=True, null=True)
     visit_count = models.IntegerField(default=0)
+
+    def get_absolute_url(self):
+        return reverse('shortener:redirect', {'short_code': self.short_code})
+
 
     def __str__(self):
         return f'{self.author.username}, {self.website}'
