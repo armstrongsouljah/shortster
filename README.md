@@ -37,12 +37,14 @@ ALLOWED_HOSTS=.localhost,*.*.com
 
 #### view your shortened urls
 - visit `http://localhost:8000/api/
+![Screen Shot 2022-05-08 at 13 57 33](https://user-images.githubusercontent.com/18280598/167294952-070f31a7-ec2a-4cc6-8891-c23ba599f810.png)
+
 
 #### Test redirection
 - open one of the created items url e.g. `"url": "http://localhost:8000/api/a916fj/"`
 
 # creating shortened urls
-- send a post request to `http://localhost:8000/new/url/`
+- send a post request to `http://localhost:8000/api/new/url/`
 
 ```
 sample data
@@ -56,3 +58,4 @@ sample data
 
 #### check stats of your website
 - visits any if your shortened links stats page e.g. `http://localhost:8000/api/a916fj/stats/`
+![Screen Shot 2022-05-08 at 13 57 17](https://user-images.githubusercontent.com/18280598/167294967-2f9c0321-157d-45fe-86b4-cfa6bc789565.png)
