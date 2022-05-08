@@ -37,7 +37,7 @@ ALLOWED_HOSTS=.localhost,*.*.com
 
 #### view your shortened urls
 - visit `http://localhost:8000/api/
-![Screen Shot 2022-05-08 at 13 57 33](https://user-images.githubusercontent.com/18280598/167294952-070f31a7-ec2a-4cc6-8891-c23ba599f810.png)
+![Screen Shot 2022-05-08 at 14 56 42](https://user-images.githubusercontent.com/18280598/167295061-177a01d3-722f-4b9c-8972-ba5ca9252f4f.png)
 
 
 #### Test redirection
